@@ -8,7 +8,9 @@
   "name": "tribesbackend",
   "version": "1.0.0",
   "main": "index.js",
-  "devDependencies": {},
+  "devDependencies": {
+    "@types/cors": "^2.8.19"
+  },
   "type": "module",
   "scripts": {
     "start": "node app.js"

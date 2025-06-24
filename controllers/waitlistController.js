@@ -5,7 +5,7 @@ export const joinWaitlist = async (req, res) => {
     const { fullname, role, collegeName, email } = req.body;
 
     // Basic validation
-    if (!fullname || !role || !collegeName || !email) {
+    if (!fullname || !role || !email) {
       return res.status(400).json({ message: "All fields are required" });
     }
 
