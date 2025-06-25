@@ -29,3 +29,15 @@ export const joinWaitlist = async (req, res) => {
     res.status(500).json({ message: "Server error" });
   }
 };
+
+
+
+export const getAllWaitlistMembers = async (req, res) => {
+  try {
+    const members = await Waitlist.find().sort({ createdAt: -1 });
+    res.status(200).json(members);
+  } catch (err) {
+    console.error("Error fetching waitlist members:", err);
+    res.status(500).json({ message: "Server error" });
+  }
+};
