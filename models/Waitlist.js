@@ -8,7 +8,8 @@ const waitlistSchema = new mongoose.Schema(
     email: { type: String, required: true, unique: true },
   },
   {
-    timestamps: true,
+    timestamps: { createdAt: true, updatedAt: false },
+    versionKey: false,
   }
 );
 
